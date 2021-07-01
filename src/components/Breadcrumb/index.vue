@@ -23,7 +23,6 @@ export default {
   },
   watch: {
     $route(route) {
-      // if you go to the redirect page, do not update the breadcrumbs
       if (route.path.startsWith('/home')) {
         return
       }
@@ -35,7 +34,6 @@ export default {
   },
   methods: {
     getBreadcrumb() {
-      // only show routes with meta.title
       let matched = this.$route.matched.filter(
         (item) => item.meta && item.meta.title
       )

@@ -6,7 +6,7 @@
       <el-button type="success">成功按钮</el-button>
       <el-button type="info">信息按钮</el-button>
       <el-button type="warning">警告按钮</el-button>
-      <el-button type="danger">危险按钮</el-button>
+      <el-button type="danger" @click="handleDelete">危险按钮</el-button>
     </el-row>
   </div>
 </template>
@@ -19,6 +19,15 @@ export default {
   computed: {
     pathRoute() {
       return this.$route.path
+    }
+  },
+  methods: {
+    handleDelete() {
+      this.$notify({
+        title: '成功',
+        message: '这是一条成功的提示消息',
+        type: 'success'
+      })
     }
   }
 }
