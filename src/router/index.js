@@ -9,13 +9,33 @@ export const constantRoutes = [
   {
     path: '/',
     component: Layout,
-    redirect: '/home',
+    redirect: '/home/home',
     children: [
       {
         path: 'home',
         component: () => import('@/views/home/index'),
         name: 'Home',
-        meta: { title: 'home', icon: 'el-icon-menu', affix: true }
+        meta: { title: '首页', icon: 'el-icon-menu', affix: true }
+      }
+    ]
+  },
+  {
+    path: '/path',
+    component: Layout,
+    meta: { title: '系统管理', icon: 'el-icon-menu' },
+    redirect: '/path/path',
+    children: [
+      {
+        path: 'path',
+        component: () => import('@/views/home/index'),
+        name: 'path',
+        meta: { title: 'path', icon: 'el-icon-menu' }
+      },
+      {
+        path: 'role',
+        component: () => import('@/views/home/index'),
+        name: 'role',
+        meta: { title: 'role', icon: 'el-icon-menu' }
       }
     ]
   }
