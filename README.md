@@ -1,30 +1,29 @@
 # vvmily-admin-template
 
-## Project setup
+    基于Vue+Router+Vuex+ElementUI，搭建简易版vue-element-admin后端管理系统平台
+    包含登录、权限校验、菜单控制等等功能。
+
+## 安装依赖
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### 项目启动
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### 项目打包
 ```
 npm run build
 ```
 
-### Lints and fixes files
+### 检验文件
 ```
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
-
-### Customize configuration 打包后部署到环境，element icon偶尔会出现乱码问题
+### 打包后部署到环境，element icon偶尔会出现乱码问题
 
 ```
 // 通过使用 node-sass替代sass
